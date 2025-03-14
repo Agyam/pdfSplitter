@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Splitter</title>
+</head>
+<body>
+<h2>Upload PDF to Split</h2>
+<form action="http://localhost:8080/api/pdf/split" method="post" enctype="multipart/form-data">
+    <label for="file">Select PDF:</label>
+    <input type="file" name="file" required><br><br>
+
+    <label for="startPage">Start Page:</label>
+    <input type="number" name="startPage" value="8" required><br><br>
+
+    <label for="endPage">End Page:</label>
+    <input type="number" name="endPage" value="999" required><br><br>
+
+    <button type="submit">Split PDF</button>
+</form>
+</body>
+</html>
